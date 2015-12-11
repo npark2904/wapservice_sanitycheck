@@ -1,0 +1,100 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".SanityCheckListActivity"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:focusable="true"
+	android:focusableInTouchMode="true"
+    android:orientation="vertical"
+   	android:background="#000">
+
+    <LinearLayout 
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:orientation="horizontal">
+       
+		<LinearLayout 
+			android:layout_width="0dp"
+			android:layout_weight="9"
+			android:layout_height="wrap_content"
+			android:orientation="vertical">
+			
+			<LinearLayout 
+			       android:layout_width="match_parent"
+			       android:layout_height="wrap_content"
+			       android:layout_marginBottom="0dp"
+			       android:layout_marginTop="5dp"
+			       android:layout_marginLeft="5dp"
+			       android:orientation="horizontal">
+					<TextView
+					     android:id="@+id/countryView"
+					     android:layout_weight="1"
+					     android:layout_width="0dp"
+					     android:layout_height="wrap_content"
+					     android:text="Country : "
+					     android:textSize="13dp"
+					     android:textColor="#fff"
+					     android:textStyle="bold" />
+					<TextView
+					     android:id="@+id/operatorView"
+					     android:layout_weight="1"
+					     android:layout_width="0dp"
+					     android:layout_height="wrap_content"
+					     android:text="Operator : "
+					     android:textSize="13dp"
+					     android:textColor="#fff"
+					     android:textStyle="bold" />
+			</LinearLayout>
+			
+			<TextView
+			    android:id="@+id/phoneNumView"
+			    android:layout_width="match_parent"
+			    android:layout_height="wrap_content"
+			    android:text="Phone Number : "
+			    android:textSize="13dp"
+			    android:paddingBottom="5dp"
+			    android:paddingTop="0dp"
+			    android:paddingLeft="5dp"
+			    android:background="#000"
+			    android:textColor="#fff"
+			    android:textStyle="bold" />
+		</LinearLayout>
+		
+		<LinearLayout 
+ 			android:layout_width="0dp"
+		    android:layout_weight="3"
+		    android:layout_height="wrap_content"
+		    android:orientation="vertical"
+		    android:background="#FFF"
+			android:layout_marginTop="6dp"
+			android:layout_marginBottom="6dp"
+		    android:layout_marginLeft="14dp"
+		    android:layout_marginRight="11dp"
+		    android:padding="1dp">
+			
+			<ToggleButton
+			    android:id="@+id/togBtn"
+			    android:layout_width="match_parent"
+			    android:layout_height="match_parent"
+
+			    android:layout_gravity="center"
+			    android:textColor="#11AFDF"
+			    android:background="#CFCFCF"
+			    android:textSize="16dp"
+			    android:textStyle="bold"
+			    android:checked="true" />
+		</LinearLayout>
+	 </LinearLayout>
+	 
+	 <LinearLayout
+	     android:id="@+id/ScrollPanel"
+	     android:layout_width="match_parent"
+	     android:layout_height="match_parent"
+	     android:background="#333"
+	     android:orientation="vertical">
+			
+	 </LinearLayout>  
+</LinearLayout>
+
+	

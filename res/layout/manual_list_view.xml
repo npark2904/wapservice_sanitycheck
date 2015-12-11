@@ -1,0 +1,697 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".SanityCheckListActivity_manual"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:focusable="true"
+	android:focusableInTouchMode="true"
+    android:orientation="vertical"
+   	android:background="#000">
+   	
+	<LinearLayout
+	    android:id="@+id/LogPanel"
+	    android:layout_width="match_parent"
+	    android:layout_height="70dp"
+  	    android:layout_marginTop="12dp"
+  	    android:layout_marginBottom="2dp"
+	    android:orientation="vertical">
+	    
+	   <TextView
+	      android:layout_width="match_parent"
+	      android:layout_height="wrap_content"
+	      android:layout_marginBottom="2dp"
+	      android:layout_marginLeft="5dp"
+	      android:textStyle="bold"
+	      android:textColor="#AC5"
+	      android:text="Simple Log"
+	      android:textSize="13sp" />
+   
+        <ScrollView
+            android:id="@+id/LogScrollView"
+		    android:layout_width="match_parent"
+		    android:layout_height="match_parent"
+		    android:paddingRight="-4dp" >
+			        
+            	<LinearLayout
+            	    android:layout_width="match_parent"
+            	    android:layout_height="match_parent"
+            	    android:orientation="vertical">
+
+					<TextView
+					    android:id="@+id/LogTextField"
+					    android:layout_width="match_parent"
+					    android:layout_height="wrap_content"
+				  	    android:layout_marginTop="3dp"
+				  	    android:layout_marginBottom="2dp"
+				  	    android:textColor="#EEE"
+				  	    android:textSize="13sp" />
+			</LinearLayout>
+			
+   		</ScrollView>
+   	</LinearLayout>
+
+    
+<ScrollView 
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:paddingRight="-4dp" >
+    		    
+	<LinearLayout
+	    android:id="@+id/wrapPanel"
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+		android:paddingLeft="5dp"
+		android:paddingRight="9dp"
+	       android:paddingBottom="5dp"
+		android:background="#333"
+	    android:orientation="vertical">
+	
+	 			<LinearLayout
+		    android:id="@+id/singleSimPanel"
+		    android:layout_width="match_parent"
+		    android:layout_height="wrap_content"
+	  	        android:layout_marginTop="10dp"
+	  	        android:layout_marginBottom="2dp"
+		    android:orientation="vertical">
+		    
+		    <TextView
+		        android:layout_width="match_parent"
+		        android:layout_height="wrap_content"
+		        android:layout_marginBottom="2dp"
+		        android:layout_marginLeft="5dp"
+		        android:textStyle="bold"
+		        android:textColor="#AC5"
+		        android:text="Single SIM Test"
+		        android:textSize="18dp"
+		        />
+		    
+		    <LinearLayout
+		        android:layout_width="match_parent"
+		        android:layout_height="wrap_content"
+				android:paddingLeft="2dp"
+				android:paddingRight="2dp"
+		        android:paddingTop="5dp"
+		        android:paddingBottom="5dp"
+			    android:background="#fff"
+		        android:orientation="horizontal">
+		
+			    <LinearLayout
+			        android:layout_width="0dp"
+			        android:layout_weight="10"
+			        android:layout_height="wrap_content"
+			        android:orientation="vertical" >
+			
+			        <TextView
+			            android:layout_width="wrap_content"
+			            android:layout_height="wrap_content"
+			            android:text="[SI] Receiving a SI message"
+			            android:textSize="@dimen/itemTitleFontSize"
+			            android:textStyle="bold" />
+			
+			        <TextView
+			            android:layout_width="fill_parent"
+			            android:layout_height="fill_parent"
+			            android:layout_marginLeft="2dp"
+			            android:text="결과 확인 :\n  1. service message 수신확인\n  2. 본문에서 'This is generic test 001' 문장 확인"
+			            android:textSize="@dimen/itemTextFontSize"
+			            android:textStyle="italic" />
+			
+			    </LinearLayout>
+			
+			    <Button
+		      	    android:id="@+id/SIPostBtn"
+					android:layout_width="0dp"
+					android:layout_weight="2"
+					android:layout_marginLeft="5dp"
+					android:layout_marginRight="12dp"
+					android:layout_height="wrap_content"
+					android:layout_gravity="center_vertical|right"
+					android:textSize="11sp"
+					android:text="Send"/>
+			    
+			</LinearLayout>
+		    
+		    <LinearLayout
+		        android:layout_width="match_parent"
+		        android:layout_height="wrap_content"
+				android:paddingLeft="2dp"
+				android:paddingRight="2dp"
+		        android:paddingTop="5dp"
+		        android:paddingBottom="5dp"
+		       	android:background="#ccc"
+		        android:orientation="horizontal">
+			    <LinearLayout
+			        android:layout_width="0dp"
+			        android:layout_weight="10"
+			        android:layout_height="wrap_content"
+			        android:orientation="vertical" >
+			        <TextView
+			            android:layout_width="wrap_content"
+			            android:layout_height="wrap_content"
+			            android:text="[SL] Receiving a SL message (ATT 미지원)"
+			            android:textSize="@dimen/itemTitleFontSize"
+			            android:textStyle="bold" />
+			        <TextView
+			            android:layout_width="fill_parent"
+			            android:layout_height="fill_parent"
+			            android:layout_marginLeft="2dp"
+			            android:text="결과 확인 :\n  service message (SL) - 수신확인"
+			            android:textSize="@dimen/itemTextFontSize"
+			            android:textStyle="italic" />
+			    </LinearLayout>
+			    <Button
+			        android:id="@+id/SLPostBtn"
+					android:layout_width="0dp"
+					android:layout_weight="2"
+					android:layout_marginLeft="5dp"
+					android:layout_marginRight="12dp"
+					android:layout_height="wrap_content"
+					android:layout_gravity="center_vertical|right"
+					android:textSize="11sp"
+					android:text="Send"/>
+			</LinearLayout>
+			
+		    <LinearLayout
+		        android:layout_width="match_parent"
+		        android:layout_height="wrap_content"
+				android:paddingLeft="2dp"
+				android:paddingRight="2dp"
+		        android:paddingTop="5dp"
+		        android:paddingBottom="5dp"
+		        android:background="#fff"
+		        android:orientation="horizontal">
+			    <LinearLayout
+			        android:layout_width="0dp"
+			        android:layout_weight="10"
+			        android:layout_height="wrap_content"
+			        android:orientation="vertical" >
+			        <TextView
+			            android:layout_width="wrap_content"
+			            android:layout_height="wrap_content"
+			            android:text="[SIE] SI message with expire attribute"
+			            android:textSize="@dimen/itemTitleFontSize"
+			            android:textStyle="bold" />
+			        <TextView
+			            android:layout_width="fill_parent"
+			            android:layout_height="fill_parent"
+			            android:layout_marginLeft="2dp"
+			            android:text="결과 확인 :\n  1. Service message (SI) 수신확인\n  2. 3분뒤 message 자동 삭제 여부 확인"
+			            android:textSize="@dimen/itemTextFontSize"
+			            android:textStyle="italic" />
+			    </LinearLayout>
+			    <Button
+			        android:id="@+id/SIEPostBtn"
+					android:layout_width="0dp"
+					android:layout_weight="2"
+					android:layout_marginLeft="5dp"
+					android:layout_marginRight="12dp"
+					android:layout_height="wrap_content"
+					android:layout_gravity="center_vertical|right"
+					android:textSize="11sp"
+					android:text="Send"/>
+			</LinearLayout>
+	
+		    <LinearLayout
+		        android:layout_width="match_parent"
+		        android:layout_height="wrap_content"
+				android:paddingLeft="2dp"
+				android:paddingRight="2dp"
+		        android:paddingTop="5dp"
+		        android:paddingBottom="5dp"
+		        android:background="#ccc"
+		        android:baselineAligned="false"
+		        android:orientation="horizontal">
+			    <LinearLayout
+			        android:layout_width="0dp"
+			        android:layout_weight="10"
+			        android:layout_height="wrap_content"
+			        android:orientation="vertical" >
+			        <TextView
+			            android:layout_width="wrap_content"
+			            android:layout_height="wrap_content"
+			            android:text="[SID] Deleting SI message via push"
+			            android:textSize="@dimen/itemTitleFontSize"
+			            android:textStyle="bold" />
+			        <TextView
+			            android:layout_width="fill_parent"
+			            android:layout_height="fill_parent"
+			            android:layout_marginLeft="2dp"
+			            android:text="결과 확인 :\n  1. si-id=1234 인 SI message 수신 확인\n  2. 다음 SI push로 해당 message 자동 삭제 여부 확인(알림 없음)"
+			            android:textSize="@dimen/itemTextFontSize"
+			            android:textStyle="italic" />
+			    </LinearLayout>
+			    <LinearLayout
+					android:layout_width="0dp"
+					android:layout_weight="2"
+					android:layout_marginLeft="5dp"
+					android:layout_marginRight="12dp"
+			        android:layout_height="wrap_content"
+			        android:gravity="center_horizontal"
+			        android:orientation="vertical" >
+			        <Button
+			            android:id="@+id/SIDPostBtn"
+						android:layout_width="match_parent"
+						android:layout_height="wrap_content"
+			            android:text="Send"
+			            android:textSize="10sp" />
+				    <Button
+				        android:id="@+id/SIDDelBtn"
+						android:layout_width="match_parent"
+						android:layout_height="wrap_content"
+						android:textSize="10sp"
+						android:text="Wait"/>
+			    </LinearLayout>
+			</LinearLayout>
+		    
+		    
+		    <LinearLayout
+		        android:layout_width="match_parent"
+		        android:layout_height="wrap_content"
+				android:paddingLeft="2dp"
+				android:paddingRight="2dp"
+		        android:paddingTop="5dp"
+		        android:paddingBottom="5dp"
+		        android:background="#fff"
+		        android:baselineAligned="false"
+		        android:orientation="horizontal">
+			    <LinearLayout
+			        android:layout_width="0dp"
+			        android:layout_weight="10"
+			        android:layout_height="wrap_content"
+			        android:orientation="vertical" >
+			        <TextView
+			            android:layout_width="wrap_content"
+			            android:layout_height="wrap_content"
+			            android:text="[OTAF] OTA PIN(Security)"
+			            android:textSize="@dimen/itemTitleFontSize"
+			            android:textStyle="bold" />
+			        <TextView
+			            android:layout_width="fill_parent"
+			            android:layout_height="fill_parent"
+			            android:layout_marginLeft="2dp"
+			            android:text="결과 확인 :\n  1. 수신 message에서 install 선택\n  2. 설정한 password와 다른 숫자로 3회 로그인 시도\n  3. message 자동 삭제 여부 확인"
+			            android:textSize="@dimen/itemTextFontSize"
+			            android:textStyle="italic" />
+			    </LinearLayout>
+			    <LinearLayout
+					android:layout_width="0dp"
+					android:layout_weight="2"
+					android:layout_marginLeft="5dp"
+					android:layout_marginRight="12dp"
+			        android:layout_height="wrap_content"
+			        android:gravity="center_horizontal"
+			        android:orientation="vertical" >
+			        <TextView
+			            android:layout_width="wrap_content"
+			            android:layout_height="wrap_content"
+			            android:textSize="12dp"
+			            android:text="OTA PIN :" 
+			            />
+			        <EditText
+			            android:id="@+id/OTA_field"
+			            android:layout_width="55dp"
+			            android:layout_height="wrap_content"
+			            android:gravity="center_vertical|center_horizontal"
+			            android:inputType="number"
+			            android:text="1234"
+			            android:textSize="12dp" />
+				    <Button
+				        android:id="@+id/OTAPostBtn"
+						android:layout_width="match_parent"
+						android:layout_height="wrap_content"
+						android:textSize="11sp"
+						android:text="Send"/>
+			    </LinearLayout>
+			</LinearLayout>
+			
+		    
+		    <LinearLayout
+		        android:layout_width="match_parent"
+		        android:layout_height="wrap_content"
+				android:paddingLeft="2dp"
+				android:paddingRight="2dp"
+		        android:paddingTop="5dp"
+		        android:paddingBottom="5dp"
+				android:background="#ccc"
+				android:baselineAligned="false"
+		        android:orientation="horizontal">
+			    <LinearLayout
+			        android:layout_width="0dp"
+			        android:layout_weight="10"
+			        android:layout_height="wrap_content"
+			        android:orientation="vertical" >
+			        <TextView
+			            android:layout_width="wrap_content"
+			            android:layout_height="wrap_content"
+			            android:text="[APN] Setting APN/Browser"
+			            android:textSize="@dimen/itemTitleFontSize"
+			            android:textStyle="bold" />
+			        <TextView
+			            android:layout_width="fill_parent"
+			            android:layout_height="fill_parent"
+			            android:layout_marginLeft="2dp"
+			            android:text="결과 확인 :\n  1. 수신 message에서 install 선택\n  2. 설정한 OTA Pin 입력\n  3. settings -> networks Tab -> Tethering n networks -> Mobile networks -> Access point names에 'APN Setting Test' 항목 선택되어 있는지 확인\n  4. Browser homepage가 www.daum.net 설정여부 확인 (메모리초기화 필요)"
+			            android:textSize="@dimen/itemTextFontSize"
+			            android:textStyle="italic" />
+			    </LinearLayout>
+			    <LinearLayout
+					android:layout_width="0dp"
+					android:layout_weight="2"
+					android:layout_marginLeft="5dp"
+					android:layout_marginRight="12dp"
+			        android:layout_height="wrap_content"
+			        android:gravity="center_horizontal"
+			        android:orientation="vertical" >
+			        <TextView
+			            android:layout_width="wrap_content"
+			            android:layout_height="wrap_content"
+			            android:textSize="12dp"
+			            android:text="OTA PIN :" 
+			            />
+			        <EditText
+			            android:id="@+id/OTA_APN_field"
+			            android:layout_width="55dp"
+			            android:layout_height="wrap_content"
+			            android:gravity="center_vertical|center_horizontal"
+			            android:inputType="number"
+			            android:text="1234"
+			            android:textSize="12dp" />
+				    <Button
+				        android:id="@+id/APNPostBtn"
+						android:layout_width="match_parent"
+						android:layout_height="wrap_content"
+						android:textSize="11sp"
+						android:text="Send"/>
+			    </LinearLayout>
+			</LinearLayout>
+			
+			<LinearLayout
+		        android:layout_width="match_parent"
+		        android:layout_height="wrap_content"
+				android:paddingLeft="2dp"
+				android:paddingRight="2dp"
+		        android:paddingTop="5dp"
+		        android:paddingBottom="5dp"
+		        android:background="#fff"
+		        android:orientation="horizontal">
+			    <LinearLayout
+			        android:layout_width="0dp"
+			        android:layout_weight="10"
+			        android:layout_height="wrap_content"
+			        android:orientation="vertical" >
+			        <TextView
+			            android:layout_width="wrap_content"
+			            android:layout_height="wrap_content"
+			            android:text="[NETWPIN] Valid network pin/APN Test"
+			            android:textSize="@dimen/itemTitleFontSize"
+			            android:textStyle="bold" />
+			        <TextView
+			            android:layout_width="fill_parent"
+			            android:layout_height="fill_parent"
+			            android:layout_marginLeft="2dp"
+			            android:text="결과 확인 :\n  1. Invalid networkPin OTA push 수신 및 install 불가 확인\n  2. Valid networkPin OTA push의 수신 및 install(APN 설정 변경) 확인"
+			            android:textSize="@dimen/itemTextFontSize"
+			            android:textStyle="italic" />
+			    </LinearLayout>
+			    <Button
+			        android:id="@+id/netPinBtn"
+					android:layout_width="0dp"
+					android:layout_weight="2"
+					android:layout_marginLeft="5dp"
+					android:layout_marginRight="12dp"
+					android:layout_height="wrap_content"
+					android:layout_gravity="center_vertical|right"
+					android:textSize="11sp"
+					android:text="Send"/>
+			</LinearLayout>
+			
+		</LinearLayout>
+	
+	
+	 	<!--  dual -->
+	 			
+		<LinearLayout
+		    android:id="@+id/dualSimPanel"
+		    android:layout_width="match_parent"
+		    android:layout_height="wrap_content"
+	  	        android:layout_marginTop="10dp"
+	  	        android:layout_marginBottom="2dp"
+		    android:orientation="vertical">
+		    
+			<TextView
+		        android:layout_width="match_parent"
+		        android:layout_height="wrap_content"
+		        android:layout_marginBottom="2dp"
+		        android:layout_marginLeft="5dp"
+		        android:textStyle="bold"
+		        android:textColor="#AC5"
+		        android:text="Dual SIM Test"
+		        android:textSize="18dp"
+		        />
+		    
+		    <LinearLayout
+		        android:layout_width="match_parent"
+		        android:layout_height="wrap_content"
+				android:paddingLeft="2dp"
+				android:paddingRight="2dp"
+		        android:paddingTop="5dp"
+		        android:paddingBottom="5dp"
+			    android:background="#fff"
+		        android:orientation="horizontal">
+			    <LinearLayout
+			        android:layout_width="0dp"
+			        android:layout_weight="10"
+			        android:layout_height="wrap_content"
+			        android:orientation="vertical" >
+			        <TextView
+			            android:layout_width="wrap_content"
+			            android:layout_height="wrap_content"
+			            android:text="[Dual] Receiving a SI message"
+			            android:textSize="@dimen/itemTitleFontSize"
+			            android:textStyle="bold" />
+			        <TextView
+			            android:layout_width="fill_parent"
+			            android:layout_height="fill_parent"
+			            android:layout_marginLeft="2dp"
+			            android:text="결과 확인 :\n  1. 모든 SIM의 service message 수신 확인\n  2. 본문에서 'This is generic test 001' 문장 확인"
+			            android:textSize="@dimen/itemTextFontSize"
+			            android:textStyle="italic" />
+			    </LinearLayout>
+			    <Button
+		      	    android:id="@+id/dualSIPostBtn"
+					android:layout_width="0dp"
+					android:layout_weight="2"
+					android:layout_marginLeft="5dp"
+					android:layout_marginRight="12dp"
+					android:layout_height="wrap_content"
+					android:layout_gravity="center_vertical|right"
+					android:textSize="11sp"
+					android:text="Send"/>
+			</LinearLayout>
+		    
+		    <LinearLayout
+		        android:layout_width="match_parent"
+		        android:layout_height="wrap_content"
+				android:paddingLeft="2dp"
+				android:paddingRight="2dp"
+		        android:paddingTop="5dp"
+		        android:paddingBottom="5dp"
+		       	android:background="#ccc"
+		        android:orientation="horizontal">
+			    <LinearLayout
+			        android:layout_width="0dp"
+			        android:layout_weight="10"
+			        android:layout_height="wrap_content"
+			        android:orientation="vertical" >
+			        <TextView
+			            android:layout_width="wrap_content"
+			            android:layout_height="wrap_content"
+			            android:text="[Dual] Receiving a SL message (ATT 미지원)"
+			            android:textSize="@dimen/itemTitleFontSize"
+			            android:textStyle="bold" />
+			        <TextView
+			            android:layout_width="fill_parent"
+			            android:layout_height="fill_parent"
+			            android:layout_marginLeft="2dp"
+			            android:text="결과 확인 :\n 모든 SIM의 service message(SL) 수신확인"
+			            android:textSize="@dimen/itemTextFontSize"
+			            android:textStyle="italic" />
+			    </LinearLayout>
+			    <Button
+			        android:id="@+id/dualSLPostBtn"
+					android:layout_width="0dp"
+					android:layout_weight="2"
+					android:layout_marginLeft="5dp"
+					android:layout_marginRight="12dp"
+					android:layout_height="wrap_content"
+					android:layout_gravity="center_vertical|right"
+					android:textSize="11sp"
+					android:text="Send"/>
+			</LinearLayout>
+		    
+		    <LinearLayout
+		        android:layout_width="match_parent"
+		        android:layout_height="wrap_content"
+				android:paddingLeft="2dp"
+				android:paddingRight="2dp"
+		        android:paddingTop="5dp"
+		        android:paddingBottom="5dp"
+		        android:background="#fff"
+		        android:orientation="horizontal">
+			    <LinearLayout
+			        android:layout_width="0dp"
+			        android:layout_weight="10"
+			        android:layout_height="wrap_content"
+			        android:orientation="vertical" >
+			        <TextView
+			            android:layout_width="wrap_content"
+			            android:layout_height="wrap_content"
+			            android:text="[Dual] SI message with expire attribute"
+			            android:textSize="@dimen/itemTitleFontSize"
+			            android:textStyle="bold" />
+			        <TextView
+			            android:layout_width="fill_parent"
+			            android:layout_height="fill_parent"
+			            android:layout_marginLeft="2dp"
+			            android:text="결과 확인 :\n  1. 모든 SIM의 Service message(SI) 수신확인\n  2. 3분뒤 message 자동 삭제 여부 확인"
+			            android:textSize="@dimen/itemTextFontSize"
+			            android:textStyle="italic" />
+			    </LinearLayout>
+			    <Button
+			        android:id="@+id/dualSIDeletingPostBtn"
+					android:layout_width="0dp"
+					android:layout_weight="2"
+					android:layout_marginLeft="5dp"
+					android:layout_marginRight="12dp"
+					android:layout_height="wrap_content"
+					android:layout_gravity="center_vertical|right"
+					android:textSize="11sp"
+					android:text="Send"/>
+			</LinearLayout>
+	
+		    <LinearLayout
+		        android:layout_width="match_parent"
+		        android:layout_height="wrap_content"
+				android:paddingLeft="2dp"
+				android:paddingRight="2dp"
+		        android:paddingTop="5dp"
+		        android:paddingBottom="5dp"
+		        android:background="#ccc"
+		        android:baselineAligned="false"
+		        android:orientation="horizontal">
+			    <LinearLayout
+			        android:layout_width="0dp"
+			        android:layout_weight="10"
+			        android:layout_height="wrap_content"
+			        android:orientation="vertical" >
+			        <TextView
+			            android:layout_width="wrap_content"
+			            android:layout_height="wrap_content"
+			            android:text="[Dual] OTA PIN(Security)"
+			            android:textSize="@dimen/itemTitleFontSize"
+			            android:textStyle="bold" />
+			        <TextView
+			            android:layout_width="fill_parent"
+			            android:layout_height="fill_parent"
+			            android:layout_marginLeft="2dp"
+			            android:text="결과 확인 :\n  1. 수신 message에서 install 선택\n  2. 설정한 password와 다른 숫자로 3회 로그인 시도\n  3. message 자동 삭제 여부 확인"
+			            android:textSize="@dimen/itemTextFontSize"
+			            android:textStyle="italic" />
+			    </LinearLayout>
+			    <LinearLayout
+					android:layout_width="0dp"
+					android:layout_weight="2"
+					android:layout_marginLeft="5dp"
+					android:layout_marginRight="12dp"
+			        android:layout_height="wrap_content"
+			        android:gravity="center_horizontal"
+			        android:orientation="vertical" >
+			        <TextView
+			            android:layout_width="wrap_content"
+			            android:layout_height="wrap_content"
+			            android:textSize="12dp"
+			            android:text="OTA PIN :" />
+			        <EditText
+			            android:id="@+id/dualOTA_field"
+			            android:layout_width="55dp"
+			            android:layout_height="wrap_content"
+			            android:gravity="center_vertical|center_horizontal"
+			            android:inputType="number"
+			            android:text="1234"
+			            android:textSize="12dp" />
+				    <Button
+				        android:id="@+id/dualOTAPostBtn"
+						android:layout_width="match_parent"
+						android:layout_height="wrap_content"
+						android:textSize="11sp"
+						android:text="Send"/>
+			    </LinearLayout>
+			</LinearLayout>
+			
+		    <LinearLayout
+		        android:layout_width="match_parent"
+		        android:layout_height="wrap_content"
+				android:paddingLeft="2dp"
+				android:paddingRight="2dp"
+		        android:paddingTop="5dp"
+		        android:paddingBottom="5dp"
+				android:background="#fff"
+				android:baselineAligned="false"
+		        android:orientation="horizontal">
+			    <LinearLayout
+			        android:layout_width="0dp"
+			        android:layout_weight="10"
+			        android:layout_height="wrap_content"
+			        android:orientation="vertical" >
+			        <TextView
+			            android:layout_width="wrap_content"
+			            android:layout_height="wrap_content"
+			            android:text="[Dual] Setting APN/Browser"
+			            android:textSize="@dimen/itemTitleFontSize"
+			            android:textStyle="bold" />
+			        <TextView
+			            android:layout_width="fill_parent"
+			            android:layout_height="fill_parent"
+			            android:layout_marginLeft="2dp"
+			            android:text="결과 확인 :\n  1. 수신 message에서 install 선택\n  2. 설정한 OTA Pin 입력\n  3. settings -> networks Tab -> Tethering n networks -> Mobile networks -> Access point names에 'APN Setting Test' 항목 선택되어 있는지 확인"
+			            android:textSize="@dimen/itemTextFontSize"
+			            android:textStyle="italic" />
+			    </LinearLayout>
+			    <LinearLayout
+					android:layout_width="0dp"
+					android:layout_weight="2"
+					android:layout_marginLeft="5dp"
+					android:layout_marginRight="12dp"
+			        android:layout_height="wrap_content"
+			        android:gravity="center_horizontal"
+			        android:orientation="vertical" >
+			        <TextView
+			            android:layout_width="wrap_content"
+			            android:layout_height="wrap_content"
+			            android:textSize="12dp"
+			            android:text="OTA PIN :" 
+			            />
+			        <EditText
+			            android:id="@+id/dualOTA_APN_field"
+			            android:layout_width="55dp"
+			            android:layout_height="wrap_content"
+			            android:gravity="center_vertical|center_horizontal"
+			            android:inputType="number"
+			            android:text="1234"
+			            android:textSize="12dp" />
+				    <Button
+				        android:id="@+id/dualAPNPostBtn"
+						android:layout_width="match_parent"
+						android:layout_height="wrap_content"
+						android:textSize="11sp"
+						android:text="Send"/>
+			    </LinearLayout>
+			</LinearLayout>
+		    
+	   	</LinearLayout>
+	</LinearLayout>
+</ScrollView>
+
+</LinearLayout>

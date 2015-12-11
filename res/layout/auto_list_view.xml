@@ -1,0 +1,326 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    
+    
+<LinearLayout
+    android:id="@+id/wrapPanel"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+	android:paddingLeft="5dp"
+	android:paddingRight="9dp"
+    android:paddingBottom="5dp"
+    android:orientation="vertical">
+
+    <Button
+        android:id="@+id/autoStartBtn"
+        android:layout_width="match_parent" 
+        android:layout_height="wrap_content"
+		android:layout_marginTop="6dp"
+        android:layout_marginBottom="2dp"
+		android:textColor="#EEE"
+		android:text="Start"
+		android:textStyle="bold"/>
+        
+	<LinearLayout
+	    android:id="@+id/singleSimPanel"
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="2dp"
+	    android:orientation="vertical">
+	    
+	    <TextView
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:layout_marginBottom="2dp"
+	        android:layout_marginLeft="5dp"
+	        android:textStyle="bold"
+	        android:textColor="#AC5"
+	        android:text="Single SIM Auto Test"
+	        android:textSize="18dp"
+	        />
+	    
+	    <LinearLayout
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+			android:paddingLeft="2dp"
+			android:paddingRight="2dp"
+	        android:paddingTop="5dp"
+	        android:paddingBottom="5dp"
+		    android:background="#fff"
+	        android:orientation="horizontal">
+	
+		        <TextView
+		            android:layout_width="0dp"
+		            android:layout_weight="7"
+		            android:layout_height="wrap_content"
+		            android:gravity="center|left"
+		            android:text="[SI] Receiving a SI message"
+		            android:textSize="@dimen/CheckerResultItemTitleFontSize"
+		            android:textStyle="bold" />
+		
+		        <TextView
+		            android:id="@+id/siResult"
+		            android:layout_width="0dp"
+		            android:layout_weight="2"
+		            android:layout_height="wrap_content"
+		            android:layout_marginLeft="2dp"
+		            android:textColor="#999"
+		            android:textSize="@dimen/CheckerResultFontSize"
+		            android:gravity="center"
+					android:textStyle="italic|bold" />
+		
+		</LinearLayout>
+	    
+	    
+	    <LinearLayout
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+			android:paddingLeft="2dp"
+			android:paddingRight="2dp"
+	        android:paddingTop="5dp"
+	        android:paddingBottom="5dp"
+		    android:background="#fff"
+	        android:orientation="horizontal">
+	
+		        <TextView
+		            android:layout_width="0dp"
+		            android:layout_weight="7"
+		            android:layout_height="wrap_content"
+		            android:gravity="center|left"
+		            android:text="[SL] Receiving a SL message (ATT 미지원)"
+		            android:textSize="@dimen/CheckerResultItemTitleFontSize"
+		            android:textStyle="bold" />
+		
+		        <TextView
+		            android:id="@+id/slResult"
+		            android:layout_width="0dp"
+		            android:layout_weight="2"
+		            android:layout_height="wrap_content"
+		            android:layout_marginLeft="2dp"
+		            android:textColor="#999"
+		            android:textSize="@dimen/CheckerResultFontSize"
+		            android:gravity="center"
+		            android:textStyle="italic|bold" />
+		
+		</LinearLayout>
+		
+	    
+	    <LinearLayout
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+			android:paddingLeft="2dp"
+			android:paddingRight="2dp"
+	        android:paddingTop="5dp"
+	        android:paddingBottom="5dp"
+		    android:background="#fff"
+	        android:orientation="horizontal">
+	
+		        <TextView
+		            android:layout_width="0dp"
+		            android:layout_weight="7"
+		            android:layout_height="wrap_content"
+		            android:gravity="center|left"
+		            android:text="[SIE] SI message with expire attribute"
+		            android:textSize="@dimen/CheckerResultItemTitleFontSize"
+		            android:textStyle="bold" />
+		
+		        <TextView
+		            android:id="@+id/sieResult"
+		            android:layout_width="0dp"
+		            android:layout_weight="2"
+		            android:layout_height="wrap_content"
+		            android:layout_marginLeft="2dp"
+		            android:textColor="#999"
+		            android:textSize="@dimen/CheckerResultFontSize"
+		            android:gravity="center"
+		            android:textStyle="italic|bold"/>
+		</LinearLayout>
+		
+	    <LinearLayout
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+			android:paddingLeft="2dp"
+			android:paddingRight="2dp"
+	        android:paddingTop="5dp"
+	        android:paddingBottom="5dp"
+		    android:background="#fff"
+	        android:orientation="horizontal">
+	
+		        <TextView
+		            android:layout_width="0dp"
+		            android:layout_weight="7"
+		            android:layout_height="wrap_content"
+		            android:gravity="center|left"
+		            android:text="[SID] Deleting SI message via push"
+		            android:textSize="@dimen/CheckerResultItemTitleFontSize"
+		            android:textStyle="bold" />
+		
+		        <TextView
+		            android:id="@+id/sieResult"
+		            android:layout_width="0dp"
+		            android:layout_weight="2"
+		            android:layout_height="wrap_content"
+		            android:layout_marginLeft="2dp"
+		            android:textColor="#999"
+		            android:textSize="@dimen/CheckerResultFontSize"
+		            android:gravity="center"
+		            android:text="Manual"
+		            android:textStyle="italic|bold"/>
+		</LinearLayout>
+	    
+	    <LinearLayout
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+			android:paddingLeft="2dp"
+			android:paddingRight="2dp"
+	        android:paddingTop="5dp"
+	        android:paddingBottom="5dp"
+		    android:background="#fff"
+	        android:orientation="horizontal">
+	
+		        <TextView
+		            android:layout_width="0dp"
+		            android:layout_weight="7"
+		            android:layout_height="wrap_content"
+		            android:gravity="center|left"
+		            android:text="[OTAF] OTA PIN(Security) (PIN:1234)"
+		            android:textSize="@dimen/CheckerResultItemTitleFontSize"
+		            android:textStyle="bold" />
+		
+		        <TextView
+		            android:id="@+id/otafResult"
+		            android:layout_width="0dp"
+		            android:layout_weight="2"
+		            android:layout_height="wrap_content"
+		            android:layout_marginLeft="2dp"
+		            android:textColor="#999"
+		            android:textSize="@dimen/CheckerResultFontSize"
+		            android:gravity="center"
+		            android:textStyle="italic|bold"/>
+		</LinearLayout>
+		
+	    <LinearLayout
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+			android:paddingLeft="2dp"
+			android:paddingRight="2dp"
+	        android:paddingTop="5dp"
+	        android:paddingBottom="5dp"
+		    android:background="#fff"
+	        android:orientation="horizontal">
+	
+		        <TextView
+		            android:layout_width="0dp"
+		            android:layout_weight="7"
+		            android:layout_height="wrap_content"
+		            android:gravity="center|left"
+		            android:text="[APN] Setting APN/Browser (PIN:1234)"
+		            android:textSize="@dimen/CheckerResultItemTitleFontSize"
+		            android:textStyle="bold" />
+		
+		        <TextView
+		            android:id="@+id/apnResult"
+		            android:layout_width="0dp"
+		            android:layout_weight="2"
+		            android:layout_height="wrap_content"
+		            android:layout_marginLeft="2dp"
+		            android:textColor="#999"
+		            android:textSize="@dimen/CheckerResultFontSize"
+		            android:gravity="center"
+		            android:textStyle="italic|bold"/>
+		</LinearLayout>
+	
+		<LinearLayout
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+			android:paddingLeft="2dp"
+			android:paddingRight="2dp"
+	        android:paddingTop="5dp"
+	        android:paddingBottom="5dp"
+		    android:background="#fff"
+	        android:orientation="horizontal">
+	
+		        <TextView
+		            android:layout_width="0dp"
+		            android:layout_weight="7"
+		            android:layout_height="wrap_content"
+		            android:gravity="center|left"
+		            android:text="[NETWPIN] Valid network pin/APN Test"
+		            android:textSize="@dimen/CheckerResultItemTitleFontSize"
+		            android:textStyle="bold" />
+		
+		        <TextView
+		            android:id="@+id/apnResult"
+		            android:layout_width="0dp"
+		            android:layout_weight="2"
+		            android:layout_height="wrap_content"
+		            android:layout_marginLeft="2dp"
+		            android:textColor="#999"
+		            android:textSize="@dimen/CheckerResultFontSize"
+		            android:text="Manual"
+		            android:gravity="center"
+		            android:textStyle="italic|bold"/>
+		</LinearLayout>
+		
+	</LinearLayout>
+	
+	<LinearLayout
+	    android:id="@+id/LogPanel"
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+  	    android:layout_marginTop="12dp"
+  	    android:layout_marginBottom="2dp"
+	    android:orientation="vertical">
+	    
+	   <TextView
+	      android:layout_width="match_parent"
+	      android:layout_height="wrap_content"
+	      android:layout_marginBottom="2dp"
+	      android:layout_marginLeft="5dp"
+	      android:textStyle="bold"
+	      android:textColor="#AC5"
+	      android:text="Log"
+	      android:textSize="18dp" />
+   
+        <ScrollView
+            android:id="@+id/LogScrollView"
+		    android:layout_width="match_parent"
+		    android:layout_height="match_parent"
+		    android:paddingRight="-4dp" >
+			        
+            	<LinearLayout
+            	    android:layout_width="match_parent"
+            	    android:layout_height="match_parent"
+            	    android:orientation="vertical">
+
+					<TextView
+					    android:id="@+id/LogTextField"
+					    android:layout_width="match_parent"
+					    android:layout_height="wrap_content"
+				  	    android:layout_marginTop="10dp"
+				  	    android:layout_marginBottom="2dp"
+				  	    android:textColor="#EEE"
+				  	    android:text=""/>
+			</LinearLayout>
+			
+   		</ScrollView>
+   	</LinearLayout>
+	
+	
+	<LinearLayout
+	    android:id="@+id/dualSimPanel"
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+  	    android:layout_marginTop="10dp"
+  	    android:layout_marginBottom="2dp"
+	    android:orientation="vertical">
+	    
+   	</LinearLayout>
+
+</LinearLayout>
+
+</LinearLayout>
